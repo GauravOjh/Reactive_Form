@@ -1,0 +1,22 @@
+
+<div class="main-container">
+    <h1>Template Form</h1>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label class="lab" for="name">UserName</label>
+            <input class="inp" name="name" required type="text" id="name" formControlName="name">
+            <small *ngIf="!myForm.get('name')?.valid && myForm.get('name')?.touched">Username is required</small>
+        </div>
+        <div>
+            <label class="lab" for="email">Email</label>
+            <input class="inp" name="email" required email type="email" id="email" formControlName="email">
+            <small *ngIf="myForm.get('email')?.errors && myForm.get('email')?.touched">Email is required</small>
+        </div>
+        <div>
+            <input type="checkbox" formControlName="readTerm">
+            <label for="readTerm" style="margin-top: 10px;">I've read and agree to the terms and conditions.</label>
+        </div>
+        <button style="margin: 10px;" [disabled]="!myForm.valid"  type="submit">Save</button>
+        <button type="button" (click)="accept()">Accept</button>
+    </form>
+</div>

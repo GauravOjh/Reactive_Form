@@ -1,0 +1,30 @@
+.main-container{
+    text-align: center;
+    color:azure;
+}
+
+
+.lab{
+    display: block;
+}
+
+.inp{
+    background-color: azure;
+    width: 390px;
+    border-radius: 7px;
+    height: 30px;
+}
+
+small{
+    color:red !important;
+    display: block;
+    font-weight: bold;
+}
+
+input.ng-invalid.ng-dirty{
+    border: solid 1px red;
+}
+
+button{
+    cursor: pointer;
+}
